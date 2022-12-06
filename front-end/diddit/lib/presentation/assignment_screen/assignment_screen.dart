@@ -63,6 +63,7 @@ class AssignmentScreen extends StatelessWidget {
               'Assignment Description',
               textAlign: TextAlign.center,
             ),
+            SizedBox(height: 10),
             Text('${task.teacherDesc}', textAlign: TextAlign.center),
             SizedBox(height: 60),
             SizedBox(

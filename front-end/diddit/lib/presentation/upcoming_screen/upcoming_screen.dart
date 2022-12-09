@@ -57,12 +57,7 @@ class _UpcomingScreenState extends State<UpcomingScreen> {
             onPressed: () => Navigator.of(context).pop(),
           ),
           actions: <Widget>[
-            IconButton(
-                icon: Icon(Icons.home),
-                onPressed: () => {
-                      Navigator.of(context).push(new MaterialPageRoute(
-                          builder: (context) => new UpcomingScreen()))
-                    }),
+            Icon(Icons.home),
             IconButton(
                 icon: Icon(Icons.check_box),
                 onPressed: () => {
@@ -310,3 +305,4 @@ Future<List<Task>> fetchAlbum() async {
     throw Exception('Failed to load album');
   }
 }
+

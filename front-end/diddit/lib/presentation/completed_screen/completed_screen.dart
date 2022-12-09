@@ -52,14 +52,7 @@ class _CompletedScreenState extends State<CompletedScreen> {
                       Navigator.of(context).push(new MaterialPageRoute(
                           builder: (context) => new UpcomingScreen()))
                     }),
-            IconButton(
-                icon: Icon(Icons.check_box),
-                onPressed: () => {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => CompletedScreen()))
-                    }),
+          Icon(Icons.check_box),
           ]),
 
       /// PAGE COLOR
@@ -199,3 +192,4 @@ class _CompletedScreenState extends State<CompletedScreen> {
     );
   }
 }
+

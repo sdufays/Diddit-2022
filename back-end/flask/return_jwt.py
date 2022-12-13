@@ -27,8 +27,8 @@ dictionary = {
     "3330701211516000": {
         "ID": "3330701211516000",
         "Type": 1,
-        "Class": "Biology",
-        "Name": "HW - Atwoods Machine Lab",
+        "Class": "Web App Dev",
+        "Name": "HW - Invest in Diddit",
         "Description Teacher": "Academic and College Advising College Knowledge Part 2, Colleg e Scholarships  Math best practices Vertical Teaming - Link: http://ahschool.schoology.com/event/6040886539/profile",
         "Description Student": "",
         "Due Date": "2022-10-13",
@@ -39,8 +39,8 @@ dictionary = {
     "3330701211516001": {
         "ID": "3330701211516001",
         "Type": 1,
-        "Class": "Spanish",
-        "Name": "HW - Spanish Assignment",
+        "Class": "Personal",
+        "Name": "CW - Try Demo",
         "Description Teacher": "Haz la tarea.  Math best practices Vertical Teaming - Link: http://ahschool.schoology.com/event/6040886539/profile",
         "Description Student": "",
         "Due Date": "2022-10-15",

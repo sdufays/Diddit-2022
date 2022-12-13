@@ -92,8 +92,7 @@ class SignInScreen extends GetWidget<SignInController> {
                     ),
                     textInputAction: TextInputAction.done,
                     validator: (value) {
-                      if (value == null ||
-                          (!isValidPassword(value, isRequired: true))) {
+                      if (value == null) {
                         return "Please enter valid password";
                       }
                       password = value;

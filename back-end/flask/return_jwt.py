@@ -51,8 +51,8 @@ dictionary = {
     "3330701211516002": {
         "ID": "3330701211516002",
         "Type": 1,
-        "Class": "English",
-        "Name": "Read Macbeth Chapter 1",
+        "Class": "Web App Dev",
+        "Name": "Watch Presentation",
         "Description Teacher": "You will be reading this book over the course of two weeks  Math best practices Vertical Teaming - Link: http://ahschool.schoology.com/event/6040886539/profile",
         "Description Student": "",
         "Due Date": "2022-10-15",
@@ -63,8 +63,8 @@ dictionary = {
     "3330701211516004": {
         "ID": "3330701211516002",
         "Type": 1,
-        "Class": "Web App Dev",
-        "Name": "Watch Presentation",
+        "Class": "English",
+        "Name": "Read Macbeth Chapter 1",
         "Description Teacher": "Be prepared for in-class discussion. - Link: http://ahschool.schoology.com/event/6040886539/profile",
         "Description Student": "",
         "Due Date": "2022-10-15",

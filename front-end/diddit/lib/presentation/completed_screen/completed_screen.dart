@@ -39,21 +39,29 @@ class _CompletedScreenState extends State<CompletedScreen> {
         child: Scaffold(
       /// APP BAR, SAME ON EVERY PAGE SO MAYBE I SHOULD MAKE IT AN INDEPENDENT WIDGET LOL
       appBar: AppBar(
-          backgroundColor: Color.fromARGB(255, 213, 114, 231),
-          elevation: 0,
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios),
-            onPressed: () => Navigator.of(context).pop(),
-          ),
-          actions: <Widget>[
-            IconButton(
-                icon: Icon(Icons.home),
-                onPressed: () => {
-                      Navigator.of(context).push(new MaterialPageRoute(
-                          builder: (context) => new UpcomingScreen()))
-                    }),
-          Icon(Icons.check_box),
-          ]),
+        backgroundColor: Color.fromARGB(255, 213, 114, 231),
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        //actions: <Widget>[
+        //IconButton(
+        //icon: Icon(Icons.home),
+        //onPressed: () => {
+        //Navigator.of(context).push(new MaterialPageRoute(
+        //builder: (context) => new UpcomingScreen()))
+        //}),
+        //IconButton(
+        //icon: Icon(Icons.check_box),
+        //onPressed: () => {
+        //Navigator.push(
+        //context,
+        //MaterialPageRoute(
+        //builder: (context) => CompletedScreen()))
+        //}),
+        //]
+      ),
 
       /// PAGE COLOR
       backgroundColor: ColorConstant.purple50,
@@ -192,4 +200,3 @@ class _CompletedScreenState extends State<CompletedScreen> {
     );
   }
 }
-

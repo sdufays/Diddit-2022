@@ -63,8 +63,8 @@ dictionary = {
     "3330701211516004": {
         "ID": "3330701211516002",
         "Type": 1,
-        "Class": "History",
-        "Name": "Watch History Video",
+        "Class": "Web App Dev",
+        "Name": "Watch Presentation",
         "Description Teacher": "Be prepared for in-class discussion. - Link: http://ahschool.schoology.com/event/6040886539/profile",
         "Description Student": "",
         "Due Date": "2022-10-15",

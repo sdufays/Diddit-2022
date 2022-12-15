@@ -107,7 +107,7 @@ class RegisterScreen extends GetWidget<RegisterController> {
                           (!isValidPassword(value, isRequired: true))) {
                         return "Please enter valid password";
                       }
-                      return null;
+                      password = value;
                     },
                     isObscureText: true,
                   ),
@@ -123,11 +123,10 @@ class RegisterScreen extends GetWidget<RegisterController> {
                     ),
                     textInputAction: TextInputAction.done,
                     validator: (value) {
-                      if (value == null ||
-                          (!isValidPassword(value, isRequired: true))) {
-                        return "Please enter valid password";
+                      if (value == null || value != password) {
+                        return "Passwords do not match";
                       }
-                      password = value;
+                      return null;
                     },
                     isObscureText: true,
                   ),
@@ -209,4 +208,3 @@ class RegisterScreen extends GetWidget<RegisterController> {
     );
   }
 }
-

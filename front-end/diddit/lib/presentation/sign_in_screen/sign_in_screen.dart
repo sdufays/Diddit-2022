@@ -92,8 +92,8 @@ class SignInScreen extends GetWidget<SignInController> {
                     ),
                     textInputAction: TextInputAction.done,
                     validator: (value) {
-                      if (value == null) {
-                        return "Please enter valid password";
+                      if (value == null || value.length < 5) {
+                        return "Please enter least 4 characters";
                       }
                       password = value;
                     },

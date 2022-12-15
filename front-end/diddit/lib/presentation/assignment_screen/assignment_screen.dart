@@ -4,6 +4,7 @@ import 'package:diddit_final/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:diddit_final/presentation/upcoming_screen/upcoming_screen.dart';
 import 'package:diddit_final/presentation/completed_screen/completed_screen.dart';
+import 'package:diddit_final/presentation/sign_in_screen/sign_in_screen.dart';
 
 // i think should be stateless and have a "task" attribute that takes from task list
 // assignment widget must have a TASK AS A PARAMETER
@@ -20,16 +21,18 @@ class AssignmentScreen extends StatelessWidget {
         appBar: AppBar(
             backgroundColor: Color.fromARGB(255, 213, 114, 231),
             elevation: 0,
-            leading: IconButton(
-              icon: Icon(Icons.arrow_back_ios),
-              onPressed: () => Navigator.of(context).pop(),
-            ),
+            //leading: IconButton(
+            //icon: Icon(Icons.arrow_back_ios),
+            //onPressed: () => Navigator.of(context).pop(),
+            //),
             actions: <Widget>[
               IconButton(
                   icon: Icon(Icons.home),
                   onPressed: () => {
-                        Navigator.of(context).push(new MaterialPageRoute(
-                            builder: (context) => new UpcomingScreen()))
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => UpcomingScreen()))
                       }),
               IconButton(
                   icon: Icon(Icons.check_box),
@@ -40,6 +43,50 @@ class AssignmentScreen extends StatelessWidget {
                                 builder: (context) => CompletedScreen()))
                       }),
             ]),
+        drawer: Drawer(
+          // Add a ListView to the drawer. This ensures the user can scroll
+          // through the options in the drawer if there isn't enough vertical
+          // space to fit everything.
+          child: ListView(
+            // Important: Remove any padding from the ListView.
+            padding: EdgeInsets.zero,
+            children: [
+              const SizedBox(
+                height: 64.0,
+                child: DrawerHeader(
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 213, 114, 231),
+                  ),
+                  //margin: EdgeInsets.all(0.0),
+                  //padding: EdgeInsets.all(0.0),
+                  child: Text(
+                    'Diddit',
+                    style: TextStyle(fontSize: 25, color: Colors.white),
+                  ),
+                ),
+              ),
+              ListTile(
+                title: const Text('Log out'),
+                onTap: () => {
+                  // Update the state of the app
+                  // ...
+                  // Then close the drawer
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignInScreen()))
+                },
+              ),
+              //ListTile(
+              //title: const Text('Item 2'),
+              //onTap: () {
+              // Update the state of the app
+              // ...
+              // Then close the drawer
+              //Navigator.pop(context);
+              //},
+              //),
+            ],
+          ),
+        ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,

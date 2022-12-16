@@ -105,33 +105,43 @@ class AssignmentScreen extends StatelessWidget {
                   fontSize: 20,
                   color: task.classColor,
                 )),
-            SizedBox(height: 60),
-            Text(
-              'Assignment Description',
-              textAlign: TextAlign.center,
-            ),
             SizedBox(height: 10),
-            Text('${task.teacherDesc}', textAlign: TextAlign.center),
-            SizedBox(height: 60),
-            SizedBox(
-                width: 50,
-                height: 50,
-                child: TextButton(
-                  child: task.markedDone
-                      ? Text("Mark as unfinished")
-                      : Text("Mark as done"),
-                  style: TextButton.styleFrom(
-                      foregroundColor: Colors.white,
-                      backgroundColor: Colors.purple,
-                      padding: const EdgeInsets.all(16.0)),
-                  onPressed: () async {
-                    if (this.task.markedDone == false) {
-                      Navigator.pop(context, this.task.markedDone = true);
-                    } else {
-                      Navigator.pop(context, this.task.markedDone = false);
-                    }
-                  },
-                )),
+            Container(
+              margin: const EdgeInsets.all(20),
+              child: Text(
+                'Assignment Description:',
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                    fontSize: 17, decoration: TextDecoration.underline),
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(left: 20.0, right: 20.0),
+              child: Text('${task.teacherDesc}',
+                  textAlign: TextAlign.left, style: TextStyle(fontSize: 15)),
+            ),
+            Container(
+              margin: const EdgeInsets.all(20),
+              child: SizedBox(
+                  width: 50,
+                  height: 50,
+                  child: TextButton(
+                    child: task.markedDone
+                        ? Text("Mark as unfinished")
+                        : Text("Mark as done"),
+                    style: TextButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: Colors.purple,
+                        padding: const EdgeInsets.all(16.0)),
+                    onPressed: () async {
+                      if (this.task.markedDone == false) {
+                        Navigator.pop(context, this.task.markedDone = true);
+                      } else {
+                        Navigator.pop(context, this.task.markedDone = false);
+                      }
+                    },
+                  )),
+            )
           ],
         ));
   }

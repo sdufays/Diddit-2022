@@ -107,7 +107,7 @@ class RegisterScreen extends GetWidget<RegisterController> {
                           (!isValidPassword(value, isRequired: true))) {
                         return "Please enter valid password";
                       }
-                      password = value;
+                      return null;
                     },
                     isObscureText: true,
                   ),
@@ -126,7 +126,7 @@ class RegisterScreen extends GetWidget<RegisterController> {
                       if (value == null || value != password) {
                         return "Passwords do not match";
                       }
-                      return null;
+                      password = value;
                     },
                     isObscureText: true,
                   ),

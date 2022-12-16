@@ -19,6 +19,7 @@ class RegisterScreen extends GetWidget<RegisterController> {
   final myController = TextEditingController();
 
   late String password = "";
+  late String password2 = "";
   late String email = "";
 
   @override
@@ -107,7 +108,7 @@ class RegisterScreen extends GetWidget<RegisterController> {
                           (!isValidPassword(value, isRequired: true))) {
                         return "Please enter valid password";
                       }
-                      return null;
+                      password = value;
                     },
                     isObscureText: true,
                   ),
@@ -126,7 +127,7 @@ class RegisterScreen extends GetWidget<RegisterController> {
                       if (value == null || value != password) {
                         return "Passwords do not match";
                       }
-                      password = value;
+                      password2 = password;
                     },
                     isObscureText: true,
                   ),
@@ -146,7 +147,7 @@ class RegisterScreen extends GetWidget<RegisterController> {
                       email == "" || password == ""
                           ? print("null")
                           : await TaskListAPI.sendRegister(
-                              email, password, context);
+                              email, password2, context);
                     }, /*{
                        Navigator.push(
                           context,
